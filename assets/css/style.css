@@ -18,11 +18,7 @@ p.html {
     padding: 3px;
     border: 1px solid #eb3f00;
     border-radius: 28px;
-}
-
-p.html:hover {
     background-color: #ff966f;
-    transition: .8s;
     cursor: default;
 }
 
@@ -32,10 +28,6 @@ p.css {
     padding: 3px;
     border: 1px solid #377dff;
     border-radius: 28px;
-}
-
-p.css:hover {
-    transition: .8s;
     cursor: default;
     background-color: #75a4fc;
 }
@@ -46,12 +38,102 @@ p.js {
     padding: 3px;
     border: 1px solid #d4d800;
     border-radius: 28px;
+    background-color: #f8fa83;
+    cursor: default;
 }
 
-p.js:hover {
-    transition: .8s;
+p.ts {
+    color: #003699;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    border: 1px solid #003699;
     cursor: default;
-    background-color: #f8fa83;
+    background-color: #33579b;
+    border-radius: 28px;
+}
+
+p.react {
+    color: #0059ff;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #0059ff;
+    background-color: #6b9fff;
+}
+
+p.sass {
+    color: #ff00bf;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #ff00bf;
+    background-color: #ff87e1;
+}
+
+p.node {
+    color: #126b00;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #126b00;
+    background-color: #558b4a;
+}
+
+p.docker {
+    color: #0093ce;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #0093ce;
+    background-color: #75b0c7;
+}
+
+p.vite {
+    color: #8000a7;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #8000a7;
+    background-color: #c241e9;
+}
+
+p.tailwind {
+    color: #00e1ff;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #00e1ff;
+    background-color: #a3f4ff;
+}
+
+p.py {
+    color: #0400ff;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #0400ff;
+    background-color: #8785ff;
+}
+
+p.django {
+    color: #0a5200;
+    font-family: var(--font-paragrafo);
+    padding: 3px;
+    cursor: default;
+    border-radius: 28px;
+    border: 1px solid #0a5200;
+    background-color: #589450;
+}
+
+body {
+    background-color: var(--bg-principal);
 }
 
 a {
@@ -116,7 +198,6 @@ button.hamburger::before {
 
 main {
     height: 100%;
-    background-color: var(--bg-principal);
     padding: 0 2.5rem;
 }
 
@@ -224,15 +305,16 @@ main section#project h2 {
 
 main section#project aside {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-auto-rows: 80px;
-    grid-column-gap: 1rem;
-    row-gap: 1rem;
+    grid-template-columns: repeat(3, 400px);
+    grid-column-gap: 2.2rem;
+    row-gap: 1.6rem;
 }
 
 main section#project aside div.projetos-links-descricao {
     border: 2px solid var(--bg-texto);
     color: var(--bg-texto);
+    padding: 15px;
+    border-radius: 5px;
 }
 
 main section#project aside div.projetos-links-descricao h3 {
@@ -250,10 +332,39 @@ main section#project aside div.projetos-links-descricao p {
 }
 
 main section#project aside div.projetos-links-descricao div.tech-utilizadas {
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 8rem;
+    grid-template-columns: repeat(3, 80px);
+    grid-column-gap: 1rem;
     row-gap: 1rem;
+    margin: 2rem 0;
+}
+
+main section#project aside div.projetos-links-descricao div.tech-utilizadas p {
+    text-align: center;
+}
+
+
+main section#project aside div.projetos-links-descricao div.links-acessos ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section#project aside div.projetos-links-descricao div.links-acessos ul li:nth-child(1) {
+    margin-right: 2.2rem;
+}
+
+main section#project aside div.projetos-links-descricao div.links-acessos ul li {
+    font-family: var(--font-paragrafo);
+    background-color: var(--bg-botao);
+    padding: 1rem 1.3rem;
+    border-radius: 20px;
+}
+
+main section#project aside div.projetos-links-descricao div.links-acessos ul li a {
+    color: var(--bg-texto);
 }
 
 @keyframes typing {
