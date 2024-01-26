@@ -1,4 +1,25 @@
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector("nav");
+const changeThemeBtn = document.querySelector("#change-theme");
 
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
+
+function loadTheme() {
+  const darkMode = localStorage.getItem("dark");
+
+  if (darkMode) {
+    toggleDarkMode();
+  }
+}
+
+loadTheme();
+
+changeThemeBtn.addEventListener("change", function () {
+  toggleDarkMode();
+  
+  localStorage.removeItem("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", 1);
+  }
+});
